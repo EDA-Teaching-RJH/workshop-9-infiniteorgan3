@@ -23,7 +23,7 @@ import re
 
 def main():
     address = input("Please enter a UK address.\n").strip()
-    postcodeattempt = address.split(",")[len(address.split(",") - 1)].upper().strip()
+    postcodeattempt = address.split(",")[len(address.split(",")) - 1].upper().strip()
     
     postcode = validatingpostcode(postcodeattempt)
     
