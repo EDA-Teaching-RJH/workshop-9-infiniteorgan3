@@ -1,5 +1,6 @@
 from email import validateemail
 
+
 def test_validation():
     assert validateemail("qvahxzeueq@nhs.net") == False
     assert validateemail("rwvqhptft@nhs.net") == False
