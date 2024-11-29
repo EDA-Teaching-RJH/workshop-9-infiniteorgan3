@@ -16,3 +16,10 @@ def test_validation():
     assert validateemail("eeee@rrrr.ac.uk") == True
     assert validateemail("e@h.ac") == False
     assert validateemail("e@f.gov.uk") == True
+    assert validateemail("ejam@*/**.gov.uk") == False
+    
+def main():
+    test_validation()
+
+if __name__ == "__main__":
+    main()
