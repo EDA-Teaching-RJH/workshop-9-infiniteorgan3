@@ -67,3 +67,6 @@ def validatingpostcode(postcode):
     else:
         return False
     return postcode
+
+if __name__ == "__main__":
+    main()
