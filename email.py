@@ -1,8 +1,6 @@
 import re
 
-def validateemail():
-    email = input("Please enter an email:\n").strip()
-    
+def validateemail(email):
     if re.search(r"^\w+@\w+\.(ac.uk|gov.uk|nhs.net)$", email):
         if email.endswith("ac.uk"):
             print("Valid academic email.")
@@ -10,11 +8,13 @@ def validateemail():
             print("Valid government email.")
         else:
             print("Valid NHS email.")
+        return True
     else:
         listofreasons = reasonforinvalidity(email)
         print("The lists of reasons that the email is invalid:")
         for i in listofreasons:
             print(f"-{i}")
+        return False
 
 def reasonforinvalidity(invalid):
     listofreasons = []
@@ -35,3 +35,9 @@ def reasonforinvalidity(invalid):
         listofreasons.append("There are too few dots in the email.")
     return listofreasons
             
+def main():
+    email = input("Please enter an email:\n").strip()
+    validateemail(email)
+
+if __name__ == "__main__":
+    main()
