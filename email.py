@@ -12,7 +12,7 @@ def validateemail():
             print("Valid NHS email.")
     else:
         listofreasons = reasonforinvalidity(email)
-        print("The lists of reasons that gthe email is invalid:")
+        print("The lists of reasons that the email is invalid:")
         for i in listofreasons:
             print(f"-{i}")
 
